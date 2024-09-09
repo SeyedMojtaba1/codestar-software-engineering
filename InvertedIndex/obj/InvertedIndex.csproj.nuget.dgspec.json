@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\codestar-intern-issues\\InvertedIndex\\InvertedIndex.csproj": {}
+    "E:\\codestar-software-engineering\\InvertedIndex\\InvertedIndex.csproj": {}
   },
   "projects": {
-    "E:\\codestar-intern-issues\\InvertedIndex\\InvertedIndex.csproj": {
+    "E:\\codestar-software-engineering\\InvertedIndex\\InvertedIndex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\codestar-intern-issues\\InvertedIndex\\InvertedIndex.csproj",
+        "projectUniqueName": "E:\\codestar-software-engineering\\InvertedIndex\\InvertedIndex.csproj",
         "projectName": "InvertedIndex",
-        "projectPath": "E:\\codestar-intern-issues\\InvertedIndex\\InvertedIndex.csproj",
+        "projectPath": "E:\\codestar-software-engineering\\InvertedIndex\\InvertedIndex.csproj",
         "packagesPath": "C:\\Users\\Semir\\.nuget\\packages\\",
-        "outputPath": "E:\\codestar-intern-issues\\InvertedIndex\\obj\\",
+        "outputPath": "E:\\codestar-software-engineering\\InvertedIndex\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Semir\\AppData\\Roaming\\NuGet\\NuGet.Config"

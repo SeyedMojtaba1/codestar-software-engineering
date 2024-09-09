@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = InvertedIndex
-build_property.ProjectDir = E:\codestar-intern-issues\InvertedIndex\
+build_property.ProjectDir = E:\codestar-software-engineering\InvertedIndex\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

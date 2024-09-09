@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InvertedIndex")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08392642876c075f103fcbef60f012870e5bfffc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b65c81f3402297bf30b1c9318bf379ca5ffba273")]
 [assembly: System.Reflection.AssemblyProductAttribute("InvertedIndex")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InvertedIndex")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kQPt0l1PqG0=",
+  "dgSpecHash": "H0b/iXYDuL8=",
   "success": true,
-  "projectFilePath": "E:\\codestar-intern-issues\\InvertedIndex\\InvertedIndex.csproj",
+  "projectFilePath": "E:\\codestar-software-engineering\\InvertedIndex\\InvertedIndex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Semir\\.nuget\\packages\\system.resources.extensions\\8.0.0\\system.resources.extensions.8.0.0.nupkg.sha512"
   ],
