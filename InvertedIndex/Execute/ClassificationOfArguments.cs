@@ -1,12 +1,16 @@
 namespace InvertedIndex{
-    class ClassificationOfArguments
+    interface IClassificationOfArguments
+    {
+        public Dictionary<int, List<string>> ClassificationArgs(string[] args);
+    }
+    class ClassificationOfArguments : IClassificationOfArguments
     {
         public Dictionary<int, List<string>> ClassificationArgs(string[] args)
         {
-            Dictionary<int, List<string>> arguments = new Dictionary<int, List<string>>();
-            List<string> argMust = new List<string>();
-            List<string> argAtLeast = new List<string>();
-            List<string> argNot = new List<string>();
+            var arguments = new Dictionary<int, List<string>>();
+            var argMust = new List<string>();
+            var argAtLeast = new List<string>();
+            var argNot = new List<string>();
 
             foreach(var item in args)
             {

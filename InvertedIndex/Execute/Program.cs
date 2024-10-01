@@ -2,6 +2,7 @@
 using System.IO;
 using System.Resources;
 using System.Collections.Generic;
+using System.Reflection;
 
 
 namespace InvertedIndex
@@ -10,17 +11,20 @@ namespace InvertedIndex
     {
         static void Main(string[] args)
         {
-            ReadtxtFile rtf = new ReadtxtFile();
-            Dictionary<int, List<string>> doc = new Dictionary<int, List<string>>();
-            doc = rtf.ExtarcAllFiles(args[0]);
+            IMakeIndex makeIndex = new MakeIndex();
+            IMakeDictionary makeDictionary = new MakeDictionary(makeIndex);
+            var readtxtFile = new ReadtxtFile(makeDictionary);
+            var doc = new Dictionary<int, List<string>>();
+            doc = readtxtFile.ExtarctAllFiles(args[0]);
 
-            string[] arg = new string[args.Length-1];
-            for(int i = 0 ; i < args.Length-1 ; i++)
-            {
-                arg[i] = args[i+1];
-            }
-            ExecuteSearch exse = new ExecuteSearch();
-            exse.Execute(doc, arg);
+            var arg = args.Skip(1).Take(args.Length);
+
+            IClassificationOfArguments classificationOfArguments = new ClassificationOfArguments(); 
+            IWordsMustExist wordsMustExist = new WordsMustExist();
+            IWordsAtLeastExistOne wordsAtLeastExistOne = new WordsAtLeastExistOne();
+            IWordsMustNotExist wordsMustNotExist = new WordsMustNotExist();
+            var executeSearch = new ExecuteSearch(classificationOfArguments, wordsMustExist, wordsAtLeastExistOne, wordsMustNotExist);
+            executeSearch.Execute(doc, arg.ToArray());
         }
     }
 }

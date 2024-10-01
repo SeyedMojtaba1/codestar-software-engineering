@@ -1,9 +1,14 @@
 namespace InvertedIndex{
-    class MustExist
+    interface IWordsMustExist
+    {
+        public List<int> SearchInDocs(Dictionary<int, List<string>> doc, List<string> arg);        
+    }
+
+    class WordsMustExist : IWordsMustExist
     {
         public List<int> SearchInDocs(Dictionary<int, List<string>> doc, List<string> arg)
         {
-            List<int> contain = new List<int>();
+            var contain = new List<int>();
 
             foreach(var item in doc)
             {

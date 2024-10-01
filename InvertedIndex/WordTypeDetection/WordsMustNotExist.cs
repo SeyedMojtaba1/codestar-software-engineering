@@ -1,5 +1,10 @@
 namespace InvertedIndex{
-    class MustNotExist
+    interface IWordsMustNotExist
+    {
+        public List<int> SearchInRemDocs(Dictionary<int, List<string>> doc, List<int> contain, List<string> arg);
+    }
+
+    class WordsMustNotExist : IWordsMustNotExist
     {
         public List<int> SearchInRemDocs(Dictionary<int, List<string>> doc, List<int> contain, List<string> arg)
         {

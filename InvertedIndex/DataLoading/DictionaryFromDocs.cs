@@ -1,12 +1,22 @@
 namespace InvertedIndex{
-    class MakeDictionary
+    interface IMakeDictionary
     {
+        public Dictionary<int, List<string>> docToDic(Dictionary<int, List<string>> dirOfDoc, int key, string text);
+    }
+    class MakeDictionary : IMakeDictionary
+    {
+        private readonly IMakeIndex _makeIndex;
+
+        public MakeDictionary(IMakeIndex makeIndex)
+        {
+            _makeIndex = makeIndex;
+        }
+
         public Dictionary<int, List<string>> docToDic(Dictionary<int, List<string>> dirOfDoc, int key, string text)
         {
-            MakeIndex temp = new MakeIndex();
-            string[] arrText = temp.splitDocument(text);
+            string[] arrText = _makeIndex.splitDocument(text);
 
-            List<string> indexes = new List<string>();
+            var indexes = new List<string>();
             foreach (var item in arrText)
             {
                 indexes.Add(item);

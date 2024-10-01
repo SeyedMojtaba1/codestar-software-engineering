@@ -1,5 +1,10 @@
 namespace InvertedIndex{
-    class AtLeastExistOne
+    interface IWordsAtLeastExistOne
+    {
+        public List<int> SearchInRemDocs(Dictionary<int, List<string>> doc, List<int> contain, List<string> arg);
+    }
+
+    class WordsAtLeastExistOne : IWordsAtLeastExistOne
     {
         public List<int> SearchInRemDocs(Dictionary<int, List<string>> doc, List<int> contain, List<string> arg)
         {
@@ -8,7 +13,7 @@ namespace InvertedIndex{
                 return contain;
             }
 
-            List<int> result = new List<int>();
+            var result = new List<int>();
             foreach(var item in contain)
             {
                 foreach(var item2 in arg)
@@ -16,7 +21,6 @@ namespace InvertedIndex{
                     if(CheckExist(doc, item, item2))
                     {
                         result.Add(item);
-                        continue;
                     }
                 }
             }
