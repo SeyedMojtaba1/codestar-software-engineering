@@ -1,0 +1,89 @@
+# Ignore build and output directories
+[Bb]in/
+[Oo]bj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userprefs
+*.lock.json
+
+# Ignore IDE-specific files
+.vs/
+.idea/
+*.swp
+*.swo
+
+# Ignore NuGet packages and restore files
+[Nn]u[Gg]et/
+packages/
+*.nupkg
+*.nuspec
+nuget.exe
+
+# Ignore local development files
+*.local
+*.local.*
+*.log
+*.tmp
+*.temp
+
+# Ignore test results and coverage
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+.coverage/
+*.Test.xml
+*.testlog
+
+# Ignore ReSharper files
+_ReSharper.*
+*.resharper
+
+# Ignore Azure Functions local settings
+local.settings.json
+
+# Ignore Rider IDE files
+.idea/
+*.idea/
+*.sln.iml
+
+# Ignore Visual Studio Code files
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore Docker files
+docker-compose.override.yml
+docker-compose.vs.debug.yml
+docker-compose.vs.release.yml
+
+# Ignore Azure App Service files
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
+
+# Ignore dotnet tools
+.dotnet/
+.dotnet/tools/
+
+# Ignore Rider/ReSharper cache
+_ReSharper.Caches/
+*.DotSettings.user
+
+# Ignore Cake build files
+tools/
+!.tools/packages.config
+
+# Ignore F# files
+.fake/
+
+# xUnit-specific files
+*.xunit.runner.visualstudio.dotnetcore.testadapter
+*.xunit.runner.visualstudio.testadapter

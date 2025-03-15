@@ -1,29 +1,30 @@
-namespace InvertedIndex{
+namespace InvertedIndex
+{
     interface IWordsMustNotExist
     {
         public List<int> SearchInRemDocs(Dictionary<int, List<string>> doc, List<int> contain, List<string> arg);
     }
 
-    class WordsMustNotExist : IWordsMustNotExist
+    internal class WordsMustNotExist : IWordsMustNotExist
     {
         public List<int> SearchInRemDocs(Dictionary<int, List<string>> doc, List<int> contain, List<string> arg)
         {
-            if(arg.Count == 0)
+            if (arg.Count == 0)
             {
                 return contain;
             }
-            
-            foreach(var item in contain)
+
+            foreach (var item in contain)
             {
                 int check = 0;
-                foreach(var item2 in arg)
+                foreach (var item2 in arg)
                 {
-                    if(CheckExist(doc, item, item2))
+                    if (CheckExist(doc, item, item2))
                     {
                         check++;
                     }
                 }
-                if(check > 0)
+                if (check > 0)
                 {
                     contain.Remove(item);
                 }

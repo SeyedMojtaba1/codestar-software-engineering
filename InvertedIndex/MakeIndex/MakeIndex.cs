@@ -1,9 +1,10 @@
-namespace InvertedIndex{
+namespace InvertedIndex
+{
     interface IMakeIndex
     {
         public string[] splitDocument(string value);
     }
-    class MakeIndex : IMakeIndex
+    internal class MakeIndex : IMakeIndex
     {
         public string[] splitDocument(string value)
         {

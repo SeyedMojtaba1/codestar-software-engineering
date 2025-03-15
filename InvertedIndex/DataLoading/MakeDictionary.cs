@@ -1,9 +1,10 @@
-namespace InvertedIndex{
+namespace InvertedIndex
+{
     interface IMakeDictionary
     {
         public Dictionary<int, List<string>> docToDic(Dictionary<int, List<string>> dirOfDoc, int key, string text);
     }
-    class MakeDictionary : IMakeDictionary
+    internal class MakeDictionary : IMakeDictionary
     {
         private readonly IMakeIndex _makeIndex;
 
@@ -12,7 +13,7 @@ namespace InvertedIndex{
             _makeIndex = makeIndex;
         }
 
-        public Dictionary<int, List<string>> docToDic(Dictionary<int, List<string>> dirOfDoc, int key, string text)
+        public Dictionary<int, List<string>> docToDic(Dictionary<int, List<string>> dicOfDoc, int key, string text)
         {
             string[] arrText = _makeIndex.splitDocument(text);
 
@@ -21,10 +22,10 @@ namespace InvertedIndex{
             {
                 indexes.Add(item);
             }
-            
-            dirOfDoc.Add(key, indexes);
-            
-            return dirOfDoc;
+
+            dicOfDoc.Add(key, indexes);
+
+            return dicOfDoc;
         }
     }
 }

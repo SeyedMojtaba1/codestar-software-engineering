@@ -19,7 +19,7 @@ namespace InvertedIndex
 
             var arg = args.Skip(1).Take(args.Length);
 
-            IClassificationOfArguments classificationOfArguments = new ClassificationOfArguments(); 
+            IClassificationOfArguments classificationOfArguments = new ClassificationOfArguments();
             IWordsMustExist wordsMustExist = new WordsMustExist();
             IWordsAtLeastExistOne wordsAtLeastExistOne = new WordsAtLeastExistOne();
             IWordsMustNotExist wordsMustNotExist = new WordsMustNotExist();

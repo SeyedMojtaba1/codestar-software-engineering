@@ -1,9 +1,10 @@
-namespace InvertedIndex{
+namespace InvertedIndex
+{
     interface IClassificationOfArguments
     {
         public Dictionary<int, List<string>> ClassificationArgs(string[] args);
     }
-    class ClassificationOfArguments : IClassificationOfArguments
+    internal class ClassificationOfArguments : IClassificationOfArguments
     {
         public Dictionary<int, List<string>> ClassificationArgs(string[] args)
         {
@@ -12,14 +13,14 @@ namespace InvertedIndex{
             var argAtLeast = new List<string>();
             var argNot = new List<string>();
 
-            foreach(var item in args)
+            foreach (var item in args)
             {
                 string temp = item.ToUpper();
-                if(temp[0] == '+')
+                if (temp[0] == '+')
                 {
                     argAtLeast.Add(temp);
                 }
-                else if(temp[0] == '-')
+                else if (temp[0] == '-')
                 {
                     argNot.Add(temp);
                 }

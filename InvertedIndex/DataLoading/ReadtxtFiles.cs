@@ -1,4 +1,5 @@
-namespace InvertedIndex{
+namespace InvertedIndex
+{
 
     interface IReadtxtFile
     {
@@ -14,7 +15,7 @@ namespace InvertedIndex{
     {
         public string[] GetAllFile(string path);
     }
-    class ReadtxtFile : IReadtxtFile , IReaderFile , IGetAllFile
+    internal class ReadtxtFile : IReadtxtFile, IReaderFile, IGetAllFile
     {
         private readonly IMakeDictionary _makeDictionary;
         public ReadtxtFile(IMakeDictionary makeDictionary)
@@ -27,13 +28,13 @@ namespace InvertedIndex{
             string[] allFiles = GetAllFile(path);
 
             int i = 1;
-            foreach(var item in allFiles)
+            foreach (var item in allFiles)
             {
                 string temp = ReaderFile(item);
                 doc = _makeDictionary.docToDic(doc, i, temp);
                 i++;
             }
-            
+
             return doc;
         }
         public string ReaderFile(string path)

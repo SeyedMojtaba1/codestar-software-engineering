@@ -1,10 +1,11 @@
-namespace InvertedIndex{
+namespace InvertedIndex
+{
     interface IExecuteSearch
     {
         public void Execute(Dictionary<int, List<string>> doc, string[] args);
     }
 
-    class ExecuteSearch : IExecuteSearch
+    internal class ExecuteSearch : IExecuteSearch
     {
         private readonly IClassificationOfArguments _classificationOfArguments;
         private readonly IWordsMustExist _wordsMustExist;
@@ -27,7 +28,7 @@ namespace InvertedIndex{
             contain = _wordsAtLeastExistOne.SearchInRemDocs(doc, contain, arguments[1]);
             contain = _wordsMustNotExist.SearchInRemDocs(doc, contain, arguments[2]);
 
-            foreach(var item in contain)
+            foreach (var item in contain)
             {
                 System.Console.WriteLine("Document " + item);
             }
