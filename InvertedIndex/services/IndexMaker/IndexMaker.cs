@@ -1,10 +1,8 @@
 namespace InvertedIndex
 {
-    interface IMakeIndex
-    {
-        public string[] splitDocument(string value);
-    }
-    internal class MakeIndex : IMakeIndex
+    using Interfaces;
+
+    internal class IndexMaker : IIndexMaker
     {
         public string[] splitDocument(string value)
         {
